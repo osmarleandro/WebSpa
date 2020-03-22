@@ -3,6 +3,8 @@ package net.seleucus.wsp.main;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import net.seleucus.wsp.db.WSGestalt;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;

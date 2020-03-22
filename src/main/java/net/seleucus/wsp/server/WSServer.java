@@ -2,7 +2,7 @@ package net.seleucus.wsp.server;
 
 import net.seleucus.wsp.config.WSConfiguration;
 import net.seleucus.wsp.db.WSDatabase;
-import net.seleucus.wsp.main.WSGestalt;
+import net.seleucus.wsp.db.WSGestalt;
 import net.seleucus.wsp.main.WSVersion;
 import net.seleucus.wsp.main.WebSpa;
 import net.seleucus.wsp.server.listener.WSLegacyLogListener;
