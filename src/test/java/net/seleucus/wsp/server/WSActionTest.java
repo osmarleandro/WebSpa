@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import java.io.File;
 
-import net.seleucus.wsp.console.WSConsole;
+import net.seleucus.wsp.client.WSClient;
 import net.seleucus.wsp.main.WebSpa;
 
 import org.junit.After;
@@ -18,7 +18,7 @@ public class WSActionTest {
 	@Before
 	public void setUpStreams() throws Exception {
 
-		wsServer = new WSServer(new WebSpa(WSConsole.getWsConsole()));
+		wsServer = new WSServer(new WebSpa(WSClient.getWsConsole()));
 		
 	}
 

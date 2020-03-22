@@ -1,13 +1,14 @@
 package net.seleucus.wsp.console;
 
+import net.seleucus.wsp.client.WSClient;
+
 public abstract class WSConsole {
 
+	/**
+	 * @deprecated Use {@link WSClient#getWsConsole()} instead
+	 */
 	public static final WSConsole getWsConsole() {
-		if (System.console() != null) {
-			return new WSConsoleNative();
-		} else {
-			return new WSConsoleInOut();
-		}
+		return WSClient.getWsConsole();
 	}
 
 	public abstract String readLine(String string);
