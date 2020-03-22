@@ -5,6 +5,7 @@ import net.seleucus.wsp.console.WSConsole;
 import net.seleucus.wsp.daemon.WSDaemonStart;
 import net.seleucus.wsp.daemon.WSDaemonStatus;
 import net.seleucus.wsp.daemon.WSDaemonStop;
+import net.seleucus.wsp.db.WSGestalt;
 import net.seleucus.wsp.server.WSServer;
 import net.seleucus.wsp.util.WSUtil;
 import org.slf4j.Logger;

@@ -11,7 +11,7 @@ import javax.net.ssl.SSLPeerUnverifiedException;
 import net.seleucus.wsp.console.WSConsole;
 import net.seleucus.wsp.console.WSConsoleInOut;
 import net.seleucus.wsp.console.WSConsoleNative;
-import net.seleucus.wsp.main.WSGestalt;
+import net.seleucus.wsp.db.WSGestalt;
 import net.seleucus.wsp.main.WSVersion;
 import net.seleucus.wsp.main.WebSpa;
 import net.seleucus.wsp.util.WSKnownHosts;

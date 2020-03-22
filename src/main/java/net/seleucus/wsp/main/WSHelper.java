@@ -1,5 +1,7 @@
 package net.seleucus.wsp.main;
 
+import net.seleucus.wsp.db.WSGestalt;
+
 public class WSHelper extends WSGestalt {
 
 	public WSHelper(WebSpa myWebSpa) {

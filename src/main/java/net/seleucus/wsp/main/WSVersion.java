@@ -1,5 +1,6 @@
 package net.seleucus.wsp.main;
 
+import net.seleucus.wsp.db.WSGestalt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

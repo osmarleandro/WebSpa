@@ -1,6 +1,7 @@
-package net.seleucus.wsp.main;
+package net.seleucus.wsp.db;
 
 import net.seleucus.wsp.console.WSConsole;
+import net.seleucus.wsp.main.WebSpa;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
