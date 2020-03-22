@@ -10,7 +10,7 @@ import java.nio.CharBuffer;
 import java.sql.SQLException;
 import java.util.Arrays;
 
-public abstract class WSGestalt {
+public abstract class WSGestalt implements ExtractedInterface {
 
 	private final static Logger LOGGER = LoggerFactory.getLogger(WSGestalt.class);    
 
