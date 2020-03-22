@@ -2,7 +2,7 @@ package net.seleucus.wsp.client;
 
 import net.seleucus.wsp.crypto.WebSpaEncoder;
 
-public class WSRequestBuilder {
+public class WSRequestBuilder extends ExtractedSuperclass {
 	
 	private final String host;
 	private final String knock;
