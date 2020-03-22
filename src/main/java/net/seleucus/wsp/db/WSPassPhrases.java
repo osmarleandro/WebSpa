@@ -10,7 +10,7 @@ import java.sql.Statement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import net.seleucus.wsp.crypto.WebSpaEncoder;
+import net.seleucus.wsp.crypto.WebSpaEncoderRenamed;
 
 public class WSPassPhrases {
 
@@ -218,7 +218,7 @@ public class WSPassPhrases {
 				final int dbPPID = rs.getInt(2);
 				CharSequence rawPassword = CharBuffer.wrap(dbPassPhraseArray);
 				
-				if(WebSpaEncoder.matches(rawPassword, webSpaRequest)) {
+				if(WebSpaEncoderRenamed.matches(rawPassword, webSpaRequest)) {
 					
 					output = dbPPID;
 					break;

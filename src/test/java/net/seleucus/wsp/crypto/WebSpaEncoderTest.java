@@ -16,7 +16,7 @@ public class WebSpaEncoderTest {
 
 		String passPhrase = RandomStringUtils.randomAlphabetic(20);
 		
-		String calculatedKnock = WebSpaEncoder.encode(passPhrase);
+		String calculatedKnock = WebSpaEncoderRenamed.encode(passPhrase);
 		byte calculatedSalt = Base64.decodeBase64(calculatedKnock)[0];
 		
 		byte[] expectedBytes = PassPhraseCrypto.getHashedPassPhraseNowWithSalt(passPhrase, calculatedSalt);
@@ -31,7 +31,7 @@ public class WebSpaEncoderTest {
 		String passPhrase = RandomStringUtils.randomAlphabetic(13);
 		int actionNumber = 11;
 		
-		WebSpaEncoder myEncoder = new WebSpaEncoder(passPhrase, actionNumber);
+		WebSpaEncoderRenamed myEncoder = new WebSpaEncoderRenamed(passPhrase, actionNumber);
 		String calculatedWebSpaRequest = myEncoder.getKnockRenamed();
 		
 		byte[] calculatedBytes = Base64.decodeBase64(calculatedWebSpaRequest);
@@ -54,10 +54,10 @@ public class WebSpaEncoderTest {
 		String passPhrase = RandomStringUtils.randomAlphabetic(20);
 		int actionNumber = 11;
 		
-		WebSpaEncoder myEncoder = new WebSpaEncoder(passPhrase, actionNumber);
+		WebSpaEncoderRenamed myEncoder = new WebSpaEncoderRenamed(passPhrase, actionNumber);
 		String calculatedWebSpaRequest = myEncoder.getKnockRenamed();
 		
-		assertTrue(WebSpaEncoder.matches(passPhrase, calculatedWebSpaRequest));
+		assertTrue(WebSpaEncoderRenamed.matches(passPhrase, calculatedWebSpaRequest));
 
 	}
 	
@@ -69,16 +69,16 @@ public class WebSpaEncoderTest {
 		
 		int actionNumber = 7;
 		
-		WebSpaEncoder myEncoder = new WebSpaEncoder(passPhraseTrue, actionNumber);
+		WebSpaEncoderRenamed myEncoder = new WebSpaEncoderRenamed(passPhraseTrue, actionNumber);
 		String calculatedWebSpaRequest = myEncoder.getKnockRenamed();
 		
-		assertFalse(WebSpaEncoder.matches(passPhraseFalse, calculatedWebSpaRequest));
+		assertFalse(WebSpaEncoderRenamed.matches(passPhraseFalse, calculatedWebSpaRequest));
 		
 	}
 	
 	@Test
 	public final void testMatchesShouldReturnFalseIfWebSpaRequestIsNot100Chars() {
-		assertFalse(WebSpaEncoder.matches("A-Pa$$w0rd", "A-Web-Spa-Request-Of-Length-Not-100"));
+		assertFalse(WebSpaEncoderRenamed.matches("A-Pa$$w0rd", "A-Web-Spa-Request-Of-Length-Not-100"));
 	}
 	
 	@Test
@@ -87,9 +87,9 @@ public class WebSpaEncoderTest {
 		String passPhrase = RandomStringUtils.randomAlphabetic(11);
 		int actionNumber = 6;
 		
-		WebSpaEncoder myEncoder = new WebSpaEncoder(passPhrase, actionNumber);
+		WebSpaEncoderRenamed myEncoder = new WebSpaEncoderRenamed(passPhrase, actionNumber);
 		String webSpaRequest = myEncoder.getKnockRenamed();
 		
-		assertEquals(actionNumber, WebSpaEncoder.getActionNumber(passPhrase, webSpaRequest));
+		assertEquals(actionNumber, WebSpaEncoderRenamed.getActionNumber(passPhrase, webSpaRequest));
 	}
 }
