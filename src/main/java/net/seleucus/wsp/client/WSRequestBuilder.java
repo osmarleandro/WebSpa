@@ -1,6 +1,6 @@
 package net.seleucus.wsp.client;
 
-import net.seleucus.wsp.crypto.WebSpaEncoder;
+import net.seleucus.wsp.crypto.WebSpaEncoderRenamed;
 
 public class WSRequestBuilder extends ExtracterSuperclass {
 	
@@ -10,7 +10,7 @@ public class WSRequestBuilder extends ExtracterSuperclass {
 	public WSRequestBuilder(final String host, CharSequence password, int action) {
 	
 		this.host = host;
-		WebSpaEncoder wsEncoder = new WebSpaEncoder(password, action);
+		WebSpaEncoderRenamed wsEncoder = new WebSpaEncoderRenamed(password, action);
 		this.knock = wsEncoder.getKnockRenamed();
 		
 	}

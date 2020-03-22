@@ -3,12 +3,12 @@ package net.seleucus.wsp.crypto;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang3.ArrayUtils;
 
-public class WebSpaEncoder {
+public class WebSpaEncoderRenamed {
 
 	private CharSequence passPhrase;	
 	private int actionNumber;
 	
-	public WebSpaEncoder(CharSequence passPhrase, int actionNumber) {
+	public WebSpaEncoderRenamed(CharSequence passPhrase, int actionNumber) {
 		this.passPhrase = passPhrase;
 		this.actionNumber = actionNumber;
 	}
@@ -49,7 +49,7 @@ public class WebSpaEncoder {
 		
 		int returnAction = -1;
 		
-		if(WebSpaEncoder.matches(rawPassword, webSpaRequest)) {
+		if(WebSpaEncoderRenamed.matches(rawPassword, webSpaRequest)) {
 			
 			byte[] webSpaBytes = Base64.decodeBase64(webSpaRequest);
 			byte[] actionBytes = ArrayUtils.subarray(webSpaBytes, 51, 75);

@@ -11,7 +11,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import net.seleucus.wsp.crypto.WebSpaEncoder;
+import net.seleucus.wsp.crypto.WebSpaEncoderRenamed;
 
 public class WSActionsAvailable {
 
@@ -64,7 +64,7 @@ public class WSActionsAvailable {
 					char[] dbPassPhraseArray = rs.getString(1).toCharArray();
 					CharSequence rawPassword = CharBuffer.wrap(dbPassPhraseArray);
 					
-					actionNumber = WebSpaEncoder.getActionNumber(rawPassword, webSpaRequest);
+					actionNumber = WebSpaEncoderRenamed.getActionNumber(rawPassword, webSpaRequest);
 	
 				}
 				
