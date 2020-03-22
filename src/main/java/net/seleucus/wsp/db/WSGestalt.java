@@ -141,5 +141,9 @@ public abstract class WSGestalt {
 	public void runConsole() throws SQLException {
         LOGGER.debug("Run console called");
     }
+
+	public WSConfiguration getWSConfiguration() {
+		return myConfiguration;
+	}
 	
 }

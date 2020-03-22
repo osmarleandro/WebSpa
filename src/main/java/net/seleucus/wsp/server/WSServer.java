@@ -168,10 +168,6 @@ public class WSServer extends WSGestalt {
 		
 	}
 
-	public WSConfiguration getWSConfiguration() {
-		return myConfiguration;
-	}
-	
 	public WSDatabase getWSDatabase() {
 		return myDatabase;
 	}
