@@ -42,7 +42,7 @@ public class WebSpa {
 		}
 
 		WSGestalt wsGestalt;
-		final WebSpa webSpa = new WebSpa(WSConsole.getWsConsole());
+		final WebSpa webSpa = new WebSpa(WSClient.getWsConsole());
 		final CommandLineArgument argument = webSpa.processParameters(args);
 
 		switch (argument) {

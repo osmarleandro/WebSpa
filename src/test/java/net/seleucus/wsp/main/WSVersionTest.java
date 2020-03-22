@@ -1,6 +1,6 @@
 package net.seleucus.wsp.main;
 
-import net.seleucus.wsp.console.WSConsole;
+import net.seleucus.wsp.client.WSClient;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -77,7 +77,7 @@ public class WSVersionTest {
 	@Test
 	public void testRunConsole() throws SQLException {
 
-		WSVersion myVersion = new WSVersion(new WebSpa(WSConsole.getWsConsole()));
+		WSVersion myVersion = new WSVersion(new WebSpa(WSClient.getWsConsole()));
 		myVersion.runConsole();
 		assertEquals(WSVersion.getValue(), outContent.toString().trim());
 
