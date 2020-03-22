@@ -6,6 +6,8 @@ import net.seleucus.wsp.main.WebSpa;
 
 public class WSDaemonStop extends WSGestalt {
 
+	protected WSConfiguration myConfiguration;
+
 	public WSDaemonStop(WebSpa myWebSpa) {
 		super(myWebSpa);
 	}

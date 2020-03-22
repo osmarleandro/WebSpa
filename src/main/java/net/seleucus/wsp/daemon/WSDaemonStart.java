@@ -6,6 +6,8 @@ import net.seleucus.wsp.main.WebSpa;
 
 public class WSDaemonStart extends WSGestalt {
 
+	protected WSConfiguration myConfiguration;
+
 	public WSDaemonStart(WebSpa myWebSpa) {
 		super(myWebSpa);
 	}

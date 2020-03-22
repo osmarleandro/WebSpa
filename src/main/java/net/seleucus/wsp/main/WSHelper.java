@@ -5,6 +5,8 @@ import net.seleucus.wsp.db.WSGestalt;
 
 public class WSHelper extends WSGestalt {
 
+	protected WSConfiguration myConfiguration;
+
 	public WSHelper(WebSpa myWebSpa) {
 		super(myWebSpa);
 	}
