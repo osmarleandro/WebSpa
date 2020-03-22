@@ -17,7 +17,8 @@ import java.util.concurrent.Executors;
 
 public class WSServer extends WSGestalt {
 
-	private final static Logger LOGGER = LoggerFactory.getLogger(WSServer.class);    
+	private final static Logger LOGGER = LoggerFactory.getLogger(WSServer.class);
+	protected WSConfiguration myConfiguration;
 
 	private Tailer myLogTailer;
 	private ExecutorService myExecService;

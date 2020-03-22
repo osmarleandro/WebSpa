@@ -34,6 +34,8 @@ public class WSVersion extends WSGestalt {
         }
     }
 
+    protected WSConfiguration myConfiguration;
+
     public WSVersion(WebSpa myWebSpa) {
         super(myWebSpa);
     }

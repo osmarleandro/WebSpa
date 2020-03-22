@@ -32,6 +32,7 @@ public class WSClient extends WSGestalt {
 		"Starting to send the above HTTP request",
 		"Starting to send the above HTTPS request"
 	};
+	protected WSConfiguration myConfiguration;
 
 	public WSClient(final WebSpa myWebSpa) {
 		super(myWebSpa);

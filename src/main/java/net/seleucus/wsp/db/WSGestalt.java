@@ -20,7 +20,6 @@ public abstract class WSGestalt {
 	private static final String ANSI_RESET = "\u001B[0m";
 
 	protected final WSConsole myConsole;
-	protected WSConfiguration myConfiguration;
 
 	public WSGestalt(WebSpa myWebSpa) {
 		this.myConsole = myWebSpa.getConsole();
