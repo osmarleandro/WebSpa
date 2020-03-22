@@ -141,7 +141,4 @@ public abstract class WSGestalt {
         LOGGER.debug("Run console called");
     }
 
-	public WSConfiguration getWSConfiguration() {
-		return myConfiguration;
-	}
 }

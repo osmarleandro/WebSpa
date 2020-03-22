@@ -192,4 +192,7 @@ public class WSServer extends WSGestalt {
 		myConsole.println(msg);
 	}
 
+	public WSConfiguration getWSConfiguration() {
+		return myConfiguration;
+	}
 }

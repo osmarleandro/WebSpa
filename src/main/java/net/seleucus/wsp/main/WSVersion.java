@@ -1,5 +1,6 @@
 package net.seleucus.wsp.main;
 
+import net.seleucus.wsp.config.WSConfiguration;
 import net.seleucus.wsp.db.WSGestalt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -61,4 +62,8 @@ public class WSVersion extends WSGestalt {
 	public void runConsole() {
 		myConsole.println(WSVersion.getValue());
 	}
+
+    public WSConfiguration getWSConfiguration() {
+        return myConfiguration;
+    }
 }
