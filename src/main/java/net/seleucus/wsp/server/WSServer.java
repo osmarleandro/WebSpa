@@ -26,7 +26,6 @@ public class WSServer extends WSGestalt {
 	
 	private WSDatabase myDatabase;
 	private WSLegacyLogListener myLogListener;
-	private WSConfiguration myConfiguration;
 	private WSServerConsole myServerCommand;
 	
 	public WSServer(WebSpa myWebSpa) throws Exception {
