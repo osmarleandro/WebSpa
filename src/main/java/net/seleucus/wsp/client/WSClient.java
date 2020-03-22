@@ -20,6 +20,14 @@ import org.slf4j.LoggerFactory;
 public class WSClient extends WSGestalt {
 
 	private final static Logger LOGGER = LoggerFactory.getLogger(WSClient.class);
+	protected static String[] ACTION_CAN_BE_TAKEN = {
+		"...",
+		"The URL is neither HTTP nor HTTPS: No action will be taken",
+		"Malformed URL: No action will be taken",
+		"I/O Exception: No action will be taken",
+		"Starting to send the above HTTP request",
+		"Starting to send the above HTTPS request"
+	};
 
 	public WSClient(final WebSpa myWebSpa) {
 		super(myWebSpa);

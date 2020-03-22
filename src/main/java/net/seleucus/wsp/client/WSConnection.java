@@ -21,15 +21,6 @@ import javax.net.ssl.X509TrustManager;
 import org.apache.commons.codec.digest.DigestUtils;
 
 public class WSConnection {
-	
-	protected static String[] ACTION_CAN_BE_TAKEN = {
-		"...",
-		"The URL is neither HTTP nor HTTPS: No action will be taken",
-		"Malformed URL: No action will be taken", 
-		"I/O Exception: No action will be taken", 
-		"Starting to send the above HTTP request",
-		"Starting to send the above HTTPS request"
-	};
 
 	protected static String[] RESPONSE_MESSAGES = {
 		"...",
@@ -171,7 +162,7 @@ public class WSConnection {
 	}
 
 	public String getActionToBeTaken() {
-		return ACTION_CAN_BE_TAKEN[action];
+		return WSClient.ACTION_CAN_BE_TAKEN[action];
 	}
 
 	public String responseMessage() {
