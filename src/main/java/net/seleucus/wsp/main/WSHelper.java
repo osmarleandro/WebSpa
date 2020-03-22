@@ -1,5 +1,6 @@
 package net.seleucus.wsp.main;
 
+import net.seleucus.wsp.config.WSConfiguration;
 import net.seleucus.wsp.db.WSGestalt;
 
 public class WSHelper extends WSGestalt {
@@ -32,5 +33,9 @@ public class WSHelper extends WSGestalt {
 		myConsole.println("java -jar webspa-" + versionNoDots + ".jar -server");
 		myConsole.println("java -jar webspa-" + versionNoDots + ".jar -status");
 		myConsole.println("");
+	}
+
+	public WSConfiguration getWSConfiguration() {
+		return myConfiguration;
 	}
 }

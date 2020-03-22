@@ -8,6 +8,7 @@ import java.security.cert.CertificateEncodingException;
 
 import javax.net.ssl.SSLPeerUnverifiedException;
 
+import net.seleucus.wsp.config.WSConfiguration;
 import net.seleucus.wsp.console.WSConsole;
 import net.seleucus.wsp.console.WSConsoleInOut;
 import net.seleucus.wsp.console.WSConsoleNative;
@@ -142,6 +143,10 @@ public class WSClient extends WSGestalt {
 	private String getIpAddr(String host) throws MalformedURLException, UnknownHostException {
 		URL url = new URL(host);
 		return InetAddress.getByName(url.getHost()).getHostAddress();
+	}
+
+	public WSConfiguration getWSConfiguration() {
+		return myConfiguration;
 	}
 
 	public static final WSConsole getWsConsole() {
