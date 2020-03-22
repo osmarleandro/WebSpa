@@ -53,7 +53,7 @@ public class WSServer extends WSGestalt {
 		} else {
 			
 			LOGGER.info("Attempting to start WebSpa...");
-			File accessLog = new File(myConfiguration.getAccesLogFileLocation());
+			File accessLog = new File(getWSConfiguration().getAccesLogFileLocation());
 
 			if(accessLog.exists()) {
 
@@ -167,10 +167,6 @@ public class WSServer extends WSGestalt {
 		
 	}
 
-	public WSConfiguration getWSConfiguration() {
-		return myConfiguration;
-	}
-	
 	public WSDatabase getWSDatabase() {
 		return myDatabase;
 	}
