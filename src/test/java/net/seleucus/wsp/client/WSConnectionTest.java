@@ -10,7 +10,7 @@ public class WSConnectionTest {
 	public void testActionToBeTakenMalformedURL() {
 		// "Malformed URL: No action will be taken"
 		WSConnection myConnection = new WSConnection("MalformedURL%&^*(");
-		assertEquals(WSConnection.ACTION_CAN_BE_TAKEN[2], myConnection.getActionToBeTaken());
+		assertEquals(WSClient.ACTION_CAN_BE_TAKEN[2], myConnection.getActionToBeTaken());
 	}
 	
 	/*
