@@ -19,19 +19,15 @@ public class WSRequestBuilder extends ExtractedSuperclass {
 		
 		StringBuilder urlBuilder = new StringBuilder();
 
-		extracted(urlBuilder);
-
-		return urlBuilder.toString();
-		
-	}
-
-	private void extracted(StringBuilder urlBuilder) {
 		urlBuilder.append(host);
 		if(!host.endsWith("/")) {
 			urlBuilder.append('/');
 		}
 		urlBuilder.append(knock);
 		urlBuilder.append('/');
+
+		return urlBuilder.toString();
+		
 	}
 
 }
