@@ -32,7 +32,7 @@ public class WebSpaEncoderTest {
 		int actionNumber = 11;
 		
 		WebSpaEncoder myEncoder = new WebSpaEncoder(passPhrase, actionNumber);
-		String calculatedWebSpaRequest = myEncoder.getKnock();
+		String calculatedWebSpaRequest = myEncoder.getKnockRenamed();
 		
 		byte[] calculatedBytes = Base64.decodeBase64(calculatedWebSpaRequest);
 		byte passSalt = calculatedBytes[0];
@@ -55,7 +55,7 @@ public class WebSpaEncoderTest {
 		int actionNumber = 11;
 		
 		WebSpaEncoder myEncoder = new WebSpaEncoder(passPhrase, actionNumber);
-		String calculatedWebSpaRequest = myEncoder.getKnock();
+		String calculatedWebSpaRequest = myEncoder.getKnockRenamed();
 		
 		assertTrue(WebSpaEncoder.matches(passPhrase, calculatedWebSpaRequest));
 
@@ -70,7 +70,7 @@ public class WebSpaEncoderTest {
 		int actionNumber = 7;
 		
 		WebSpaEncoder myEncoder = new WebSpaEncoder(passPhraseTrue, actionNumber);
-		String calculatedWebSpaRequest = myEncoder.getKnock();
+		String calculatedWebSpaRequest = myEncoder.getKnockRenamed();
 		
 		assertFalse(WebSpaEncoder.matches(passPhraseFalse, calculatedWebSpaRequest));
 		
@@ -88,7 +88,7 @@ public class WebSpaEncoderTest {
 		int actionNumber = 6;
 		
 		WebSpaEncoder myEncoder = new WebSpaEncoder(passPhrase, actionNumber);
-		String webSpaRequest = myEncoder.getKnock();
+		String webSpaRequest = myEncoder.getKnockRenamed();
 		
 		assertEquals(actionNumber, WebSpaEncoder.getActionNumber(passPhrase, webSpaRequest));
 	}

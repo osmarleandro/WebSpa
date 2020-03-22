@@ -13,7 +13,7 @@ public class WebSpaEncoder {
 		this.actionNumber = actionNumber;
 	}
 	
-	public String getKnock() {
+	public String getKnockRenamed() {
 		byte[] passKnockBytes = PassPhraseCrypto.getHashedPassPhraseNow(passPhrase);
 		byte[] actionKnockBytes = ActionNumberCrypto.getHashedActionNumberNow(passPhrase, actionNumber);
 		
