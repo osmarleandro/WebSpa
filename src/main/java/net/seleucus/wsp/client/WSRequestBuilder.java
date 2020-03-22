@@ -11,7 +11,7 @@ public class WSRequestBuilder extends ExtracterSuperclass {
 	
 		this.host = host;
 		WebSpaEncoder wsEncoder = new WebSpaEncoder(password, action);
-		this.knock = wsEncoder.getKnock();
+		this.knock = wsEncoder.getKnockRenamed();
 		
 	}
 	
